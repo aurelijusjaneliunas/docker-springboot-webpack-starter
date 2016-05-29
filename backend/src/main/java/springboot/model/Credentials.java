@@ -1,4 +1,4 @@
-package application.model;
+package springboot.model;
 
 public class Credentials {
 

@@ -1,8 +1,8 @@
-package application.auth
+package springboot.auth
 
 import org.springframework.http.HttpStatus
 import org.springframework.security.test.context.support.WithMockUser
-import application.AbstractMvcSpec
+import springboot.AbstractMvcSpec
 
 class AuthenticationSpec extends AbstractMvcSpec {
 

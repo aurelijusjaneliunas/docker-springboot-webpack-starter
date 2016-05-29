@@ -1,4 +1,4 @@
-package application.api;
+package springboot.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import application.model.Credentials;
-import application.model.User;
+import springboot.model.Credentials;
+import springboot.model.User;
 
 import javax.servlet.http.HttpSession;
 
 @RestController()
 @RequestMapping("/api/session")
-public class AuthenticationResource {
+public class AuthenticationController {
   
   @Autowired
   AuthenticationManager authenticationManager;

@@ -1,4 +1,4 @@
-package application
+package springboot
 
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.session.MapSessionRepository

@@ -1,7 +1,7 @@
-package application.api
+package springboot.api
 
 import org.springframework.http.HttpStatus
-import application.AbstractMvcSpec
+import springboot.AbstractMvcSpec
 import spock.lang.Shared
 import spock.lang.Stepwise
 import spockmvc.RequestParams

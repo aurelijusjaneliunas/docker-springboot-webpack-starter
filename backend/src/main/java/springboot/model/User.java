@@ -1,4 +1,4 @@
-package application.model;
+package springboot.model;
 
 import java.io.Serializable;
 

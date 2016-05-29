@@ -1,4 +1,4 @@
-package application.api;
+package springboot.model;
 
 public class ErrorMessage {
   private String message;
