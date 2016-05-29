@@ -1,4 +1,4 @@
-package springboot.config;
+package springboot.handlers;
 
 import springboot.model.ErrorMessage;
 import org.apache.commons.logging.Log;
