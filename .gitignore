@@ -8,5 +8,5 @@ nginx/ssl/*
 *.log
 backups/*.bak
 backend/build/*
-backend/gradle/*
+backend/.gradle/*
 nohup.log
