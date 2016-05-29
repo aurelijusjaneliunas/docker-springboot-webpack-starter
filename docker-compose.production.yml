@@ -9,7 +9,7 @@ services:
             dockerfile: Dockerfile-production
         environment:
             spring.profiles.active: ${SPRING_SETTINGS_PROD}
-            spring.devtools.restart.enabled: false
+            spring.devtools.restart.enabled: "false"
         volumes:
             - "./logs/app:/tmp/logs/app"
         depends_on:

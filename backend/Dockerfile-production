@@ -17,8 +17,5 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN ./bin/install_gradlew.sh
-RUN ./bin/install_gradle.sh
-
 EXPOSE 8080
 CMD ./bin/start_production.sh
