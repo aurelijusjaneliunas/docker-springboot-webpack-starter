@@ -83,6 +83,10 @@ idea {
 
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}
+
 //bootRun {
 //    classpath = sourceSets.main.runtimeClasspath + configurations.dev
 //}
