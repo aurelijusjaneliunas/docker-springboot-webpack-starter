@@ -1,17 +1,10 @@
 #!/bin/bash
 
+./bin/gradle_clean.sh
+
 #Enable spring boot and live reaload
-gradle clean
-nohup gradle build -continuous &
-nohup gradle bootRun &                                                                                                                                                                                                                                                                                                                                                                       bootRun &
+nohup ./bin/gradle_watch.sh &
+nohup ./bin/gradle_boot.sh &                                                                                                                                                                                                                                                                                                                                                                       bootRun &
 
 #Lock the application
-for (( ; ; ))
-do
-   echo "Pres CTRL+C to stop..."
-   sleep 100
-   if (disaster-condition)
-   then
-	   break
-   fi
-done
+./bin/enldess_loop.sh

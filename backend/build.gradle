@@ -80,3 +80,9 @@ idea {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
 }
+
+bootRun {
+  if ( System.getProperty('debug', 'false') == 'true') {
+    jvmArgs = ['-Xdebug', '-Xrunjdwp:server=y,transport=dt_socket,address=8585,suspend=n']
+  }
+}

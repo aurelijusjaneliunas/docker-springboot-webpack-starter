@@ -19,6 +19,7 @@ services:
         command: ./bin/develop.sh
         ports:
             - "8080:8080"
+            - "8585:8585"
         environment:
             spring.profiles.active: ${SPRING_SETTINGS_DEV}
         depends_on:
