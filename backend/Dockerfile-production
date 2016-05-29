@@ -1,0 +1,8 @@
+FROM java:openjdk-8u91-jdk
+
+RUN mkdir -p /app
+WORKDIR /app
+
+COPY . /app/
+EXPOSE 8080
+CMD ./bin/start_production.sh

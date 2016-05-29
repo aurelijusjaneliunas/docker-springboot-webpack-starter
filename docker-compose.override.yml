@@ -1,0 +1,25 @@
+version: '2'
+services:
+    db:
+        ports:
+            - "9432:5432"
+    frontend:
+        image: node:5.10
+        working_dir: /frontend
+        command: npm run-script develop
+        volumes:
+            - ./frontend:/frontend
+        ports:
+            - "3000:3000"
+    springboot:
+        build: ./backend
+        volumes:
+            - ./backend:/app
+            - ./frontend/dist:/static
+        command: ./bin/develop.sh
+        ports:
+            - "8080:8080"
+        environment:
+            spring.profiles.active: ${SPRING_SETTINGS_DEV}
+        depends_on:
+            - db

@@ -1,0 +1,26 @@
+version: '2'
+services:
+    db:
+        volumes:
+            - "./logs/postgres:/var/log/postgresql"
+    springboot:
+        build:
+            context: ./backend
+            dockerfile: Dockerfile-production
+        environment:
+            spring.profiles.active: ${SPRING_SETTINGS_PROD}
+        volumes:
+            - "./logs/app:/tmp/logs/app"
+        depends_on:
+            - db
+    nginx:
+        build:
+            context: ./
+            dockerfile: ./nginx/Dockerfile
+        depends_on:
+            - springboot
+        volumes:
+            - "./logs/nginx:/tmp/logs"
+        ports:
+            - "80:80"
+            - "443:443"
