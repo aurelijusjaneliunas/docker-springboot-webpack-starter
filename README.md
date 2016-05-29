@@ -25,6 +25,7 @@ Start dev server:
 ./bin/develop.sh
 ```
 Wait for docker to set up container, then open [http://localhost:8080](http://localhost:8080)
+Java remote debug enabled on 8585 port
 
 ## production mode
 
