@@ -49,8 +49,6 @@ Copy your .key and .crt files to `nginx/ssl` and run `./bin/deploy.sh`.
 # frontend
 ./bin/npm.sh install [package] --save-dev
 
-# backend
-./bin/pipinstall.sh [pacakge] #will also add entry to backend/requirements.txt
 ```
 
 ## backup & restore database
