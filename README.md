@@ -7,11 +7,10 @@ Docker and docker-compose is all you need to develop, build & deploy, run develo
 Java 1.8  
 node 5.10  
 Postgres 9.5  
-SpringBoot 1.3.3  
+SpringBoot 1.3.5
 Webpack  
 Stylus   
-Nginx  
-Gunicorn
+Nginx
 
 
 ## get started
@@ -28,6 +27,7 @@ Wait for docker to set up container, then open [http://localhost:8080](http://lo
 Java remote debug enabled on 8585 port
 
 ## production mode
+Does not working right now. Need to be fixed.
 
 ```sh
 # build production images, create db backup & start
