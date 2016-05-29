@@ -39,10 +39,6 @@ repositories {
   jcenter()
 }
 
-//configurations {
-//    dev
-//}
-
 dependencies {
 
   compile 'org.springframework.boot:spring-boot-devtools'
