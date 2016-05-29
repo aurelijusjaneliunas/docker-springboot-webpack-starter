@@ -1,8 +1,8 @@
 #!/bin/bash
 
-./gradlew clean
-nohup ./gradlew build -continuous &
-nohup ./gradlew bootRun &
+./gradlew.sh clean
+nohup ./gradlew.sh build -continuous &
+nohup ./gradlew.sh bootRun &
 
 for (( ; ; ))
 do
