@@ -9,5 +9,3 @@ nginx/ssl/*
 backups/*.bak
 backend/build/*
 backend/.gradle/*
-backend/gradle/*
-backend/gradlew*
