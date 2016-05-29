@@ -7,10 +7,10 @@ Docker and docker-compose is all you need to develop, build & deploy, run develo
 Java 1.8  
 node 5.10  
 Postgres 9.5  
-SpringBoot 1.3.5 
+SpringBoot 1.3.5  
 Webpack  
 Stylus   
-Nginx
+Nginx  
 
 
 ## get started
