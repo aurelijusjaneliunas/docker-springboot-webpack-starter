@@ -8,8 +8,8 @@ nginx/static/*
 nginx/ssl/*
 *.log
 backups/*.bak
-frontend/build/*
-frontend/gradle/*
+backend/build/*
+backend/gradle/*
 .idea
 *.iml
 nohup.log
