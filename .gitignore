@@ -1,8 +1,7 @@
 *sublime*
-__pycache__
-*.pyc
+.idea
+*.iml
 node_modules
-pipcache
 frontend/dist/*
 nginx/static/*
 nginx/ssl/*
@@ -10,6 +9,4 @@ nginx/ssl/*
 backups/*.bak
 backend/build/*
 backend/gradle/*
-.idea
-*.iml
 nohup.log
