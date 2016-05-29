@@ -10,8 +10,8 @@ services:
             POSTRES_PASSWORD: postgres
         volumes_from:
             - dbdata
-    # redis:
-    #   image: redis
-    #   hostname: redis
-    #   ports:
-    #     - "6379:6379"
+    redis:
+      image: redis
+      hostname: redis
+      ports:
+        - "6379:6379"
