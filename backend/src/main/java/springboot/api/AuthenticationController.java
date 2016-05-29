@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 @RestController()
 @RequestMapping("/api/session")
 public class AuthenticationController {
-  
+
   @Autowired
   AuthenticationManager authenticationManager;
 

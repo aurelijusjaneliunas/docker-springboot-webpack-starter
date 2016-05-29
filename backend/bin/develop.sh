@@ -6,7 +6,7 @@
 #Enable spring boot and live reaload
 ./gradlew clean
 nohup ./gradlew build -continuous &
-nohup ./gradlew                                                                                                                                                                                                                                                                                                                                                                            bootRun &
+nohup ./gradlew bootRun                                                                                                                                                                                                                                                                                                                                                                         bootRun &
 
 #Lock the application
 for (( ; ; ))
