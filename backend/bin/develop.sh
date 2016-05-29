@@ -1,12 +1,9 @@
 #!/bin/bash
 
-#Install gradle wrapper
-./bin/install_gradlew.sh
-
 #Enable spring boot and live reaload
-./gradlew clean
-nohup ./gradlew build -continuous &
-nohup ./gradlew bootRun                                                                                                                                                                                                                                                                                                                                                                         bootRun &
+gradle clean
+nohup gradle build -continuous &
+nohup gradle bootRun &                                                                                                                                                                                                                                                                                                                                                                       bootRun &
 
 #Lock the application
 for (( ; ; ))
