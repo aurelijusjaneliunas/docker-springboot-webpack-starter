@@ -45,18 +45,16 @@ repositories {
 
 dependencies {
 
+  compile 'org.springframework.boot:spring-boot-devtools'
+
   compile 'org.springframework.boot:spring-boot-starter-undertow'
   compile 'org.springframework.boot:spring-boot-starter-web'
   compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-  compile 'org.codehaus.groovy:groovy'
-
-  compile 'org.springframework.boot:spring-boot-starter-security'
-  compile 'org.springframework.session:spring-session'
-
   compile 'org.springframework.boot:spring-boot-starter-redis'
 
-  compile 'org.springframework.boot:spring-boot-devtools'
-  //  dev("org.springframework.boot:spring-boot-devtools")
+  compile 'org.codehaus.groovy:groovy'
+  compile 'org.springframework.boot:spring-boot-starter-security'
+  compile 'org.springframework.session:spring-session'
 
   testCompile 'org.springframework.boot:spring-boot-starter-test'
   testCompile 'org.springframework.security:spring-security-test'
@@ -86,15 +84,3 @@ idea {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.13'
 }
-
-//bootRun {
-//    classpath = sourceSets.main.runtimeClasspath + configurations.dev
-//}
-
-//jar {
-//  from('../frontend/dist') {
-//    into 'static'
-//  }
-//}
-//
-//jar.dependsOn(':frontend:assemble')
