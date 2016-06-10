@@ -2,5 +2,5 @@ url: http://dev.bar.com
 name: Developer Setup
 
 redis.password:
-redis.host: localhost
+redis.host: redis
 redis.port: 6379
