@@ -87,3 +87,9 @@ nginx/ssl/                    - put key & cert here if you use ssl
 nginx/nginx_nossl.conf        - nginx conf if no ssl is used
 nginx/nginx_ssl.conf          - nginx conf for deploy with ssl
 ```
+
+## Good frontend starts
+
+Angular 1.x
+
+[https://github.com/AngularClass/NG6-starter](https://github.com/AngularClass/NG6-starter)
