@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
  * @author ibrahim Chaehoi
  *
  */
-@Component
 @Controller(value="JawrBinaryController")
 public class JawrBinaryController extends AbstractJawrController {
 
@@ -37,7 +36,6 @@ public class JawrBinaryController extends AbstractJawrController {
      * @see net.jawr.web.servlet.JawrSpringController#afterPropertiesSet()
      */
     @Override
-    @PostConstruct
     public void afterPropertiesSet() throws Exception {
         setServletContext(servletContext);
         super.afterPropertiesSet();
