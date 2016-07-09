@@ -2,13 +2,11 @@ package springboot.jawr;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.util.Map;
 
@@ -21,6 +19,7 @@ public class AssetInterpolator {
 
     private String assetPath;
     private Map assetMap;
+    private Boolean active = Boolean.FALSE;
 
     public AssetInterpolator(){
         this.assetPath = DEFAULT_ASSET_PATH;
@@ -36,24 +35,33 @@ public class AssetInterpolator {
     }
 
     private String getJsonString(){
-        if (StringUtils.isEmpty(assetPath)){
+        if (StringUtils.isEmpty(assetPath) && new File(assetPath).exists()){
+            System.out.print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
             return null;
         }
+
         InputStream assetContent = null;
         String assetContentStr = null;
         try {
             assetContent = new FileInputStream(assetPath);
             assetContentStr = IOUtils.toString(assetContent, Charset.defaultCharset());
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         } finally {
             if (assetContent != null){
                 IOUtils.closeQuietly(assetContent);
             }
         }
+        if (StringUtils.isNoneEmpty(assetContentStr)){
+            active = Boolean.TRUE;
+        }
         return assetContentStr;
+    }
+
+    public Boolean isActive(){
+        return active;
     }
 
     public String getJsPath(){

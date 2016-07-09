@@ -5,20 +5,18 @@
         <title>Spring boot application</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <base href="/"/>
-        <!--<th:block th:switch="${#arrays.contains(@environment.getActiveProfiles(),'prod')}">-->
-            <!--<link rel="stylesheet" href="{% static static_assets.css %}">-->
-        <!--</th:block>-->
+        <th:block th:switch="${#arrays.contains(@environment.getActiveProfiles(),'prod')}">
+            <link rel="stylesheet" th:href="${@environment.getProperty('prod_css')}"/>
+        </th:block>
     </head>
     <body>
         <th:block th:switch="${#arrays.contains(@environment.getActiveProfiles(),'prod')}">
             <th:block th:case="true">
-                <!--<script src="{% static static_assets.js %}"></script>-->
-                <script jawr:script="'/bundles/global.js'" src="#"></script>
+                <script th:src="${@environment.getProperty('prod_js')}"></script>
             </th:block>
             <th:block th:case="*">
                 <script src="http://localhost:3000/static/bundle.js"></script>
             </th:block>
         </th:block>
-        <script jawr:script="'/bundles/global.js'" src="#"></script>
     </body>
 </html>1
