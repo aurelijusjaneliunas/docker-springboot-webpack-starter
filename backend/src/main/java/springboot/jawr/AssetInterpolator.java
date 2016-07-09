@@ -36,10 +36,8 @@ public class AssetInterpolator {
 
     private String getJsonString(){
         if (StringUtils.isEmpty(assetPath) && new File(assetPath).exists()){
-            System.out.print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
             return null;
         }
-
         InputStream assetContent = null;
         String assetContentStr = null;
         try {
