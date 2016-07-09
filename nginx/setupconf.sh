@@ -1,4 +1,6 @@
 #!/bin/bash
+chmod 755 -R /static
+
 cd /etc/nginx
 rm nginx.conf
 if ls ssl/*.crt &> /dev/null; then

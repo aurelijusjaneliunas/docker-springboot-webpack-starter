@@ -2,5 +2,5 @@
 # start production server
 
 source bin/env.sh
-dcprod up -d
+dcprod up
 echo "started"
